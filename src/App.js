@@ -6,9 +6,12 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('https://script.google.com/macros/s/AKfycbyXxYAUvRyXD4vbn5si62oKvuaaAGZUa8kSSEoQ1qwyyzr6tqb8K8YGlVRtU3LEg2On/exec')
+    fetch('https://script.google.com/macros/s/AKfycbz2Lvzp_g0AeUElg6SbbQWiPirtRhL4CCCqkVYgVoopC9jrvQRoyBWIfu1jggJCfHEG/exec')
       .then(response => response.json())
-      .then(data => setData(data))
+      .then(data => {
+        console.log(data); // Log the response
+        setData(data);
+      })
       .catch(error => console.error('Error fetching data:', error));
   }, []);
 
