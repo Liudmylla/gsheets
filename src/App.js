@@ -6,7 +6,7 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('https://script.google.com/macros/s/AKfycbyKWmwQsiYloeLE5YRcq7FiKisRyDL5XYSHlpHBSCYWf30xalRy4OpVjiBT5aC9CJiu/exec')
+    fetch('https://script.google.com/macros/s/AKfycbx4jIGb2kM5ORe3XX_22r2agpg-hq4SmcHTILRzMRv8mEHme-ThNAbsI4-FndPhhZqg/exec')
       .then(response => response.json())
       .then(data => setData(data))
       .catch(error => console.error('Error fetching data:', error));
